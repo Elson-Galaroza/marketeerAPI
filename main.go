@@ -10,15 +10,11 @@ func main() {
 	router := gin.Default()
 
 	// System
-	router.GET("/api/marketeerHealth", api.HealthCheck)
+	router.GET("/marketeer/systemcheck", api.SystemCheck)
 
-	// User
-	router.POST("/api/registerUser", api.RegisterUser) //api/createUser
-	// router.POST("/api/updateUser", api.UpdateUser)
-	// router.DELETE("/api/deleteUser", api.DeleteUser)
-
-	// // Lookup
-	// router.GET("/api/lookup/:number", api.RetrieveUser)
+	// User Registration and Login
+	router.POST("/marketeer/registerUser", api.RegisterUser)
+	router.GET("/marketeer/login", api.LogInUser)
 
 	router.Run(":80")
 }

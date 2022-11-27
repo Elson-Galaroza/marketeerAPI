@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func HealthCheck(c *gin.Context) {
+func SystemCheck(c *gin.Context) {
 	var response models.GenericResponse
 
 	response.Code = http.StatusOK

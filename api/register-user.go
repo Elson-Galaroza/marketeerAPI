@@ -40,7 +40,7 @@ func RegisterUser(c *gin.Context) {
 		retrieveResponse.FirstName = registrationPayload.FirstName
 		retrieveResponse.LastName = registrationPayload.LastName
 		retrieveResponse.EMail = registrationPayload.EMail
-		//ContactNumToString := strconv.Itoa(int(registrationPayload.ContactNum))
+
 		retrieveResponse.ContactNum = registrationPayload.ContactNum
 		retrieveResponse.BirthDate = registrationPayload.BirthDate
 		retrieveResponse.Address = registrationPayload.Address
